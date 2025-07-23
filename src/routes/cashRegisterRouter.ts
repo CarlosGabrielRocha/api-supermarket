@@ -10,7 +10,7 @@ const cashRegisterController = new CashRegisterController();
 
 cashRegisterRouter.get('/', managerOnly, cashRegisterController.index);
 cashRegisterRouter.get('/cashiers', managerOnly, cashRegisterController.cashiers);
-cashRegisterRouter.get('/:id', cashRegisterController.find);
+cashRegisterRouter.get('/:id', managerOnly, cashRegisterController.find);
 
 cashRegisterRouter.post('/', managerOnly, cashRegisterController.create);
 cashRegisterRouter.post('/new-purchase/:cashRegisterId/:clientId', ensureIsAdmin, cashRegisterController.createPurchase);

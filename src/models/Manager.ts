@@ -5,9 +5,9 @@ import bycript from "bcrypt";
 export class Manager extends User {
     private static managers: Manager[] = [
         new Manager({
-            id: '2',
-            name: 'Dayse',
-            email: 'dayse@gmail.com',
+            id: '1',
+            name: 'managerUser',
+            email: 'manager@gmail.com',
             password: bycript.hashSync('123456', 10),
             role: 'manager'
         })
